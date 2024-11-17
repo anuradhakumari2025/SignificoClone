@@ -1,0 +1,27 @@
+*::selection{
+  background-color:#ef9d71;
+}
+body[theme="black"]{
+  background-color: black;
+}
+body[theme="black"] .section{
+  color: white;
+}
+body[theme="cyan"]{
+  background-color: #80becc;
+}
+body[theme="cyan"] .section{
+color: #182427;
+}
+body[theme="salmon"]{
+  background-color: salmon;
+}
+body[theme="salmon"] .section{
+  color: rgb(29, 18, 17);
+}
+body[theme="white"]{
+  background-color: #fff;
+}
+body[theme="white"] .section{
+  color: #000;
+}
