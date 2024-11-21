@@ -130,7 +130,8 @@ function cardAnimation() {
     y: 50,
     scale: 1,
     backgroundColor: "black",
-    delay: 0.2,
+    duration:2,
+    delay: 0.5,
     stagger: 0.3,
     ease: "Power4.out",
   });
@@ -155,9 +156,7 @@ function blueAnimation(){
   });
 }
 
-gsap.to(".title",{
-  y:-70
-})
+
 homePageAnimation();
 realPageAnimation();
 teamAnimation();

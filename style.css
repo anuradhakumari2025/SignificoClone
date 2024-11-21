@@ -40,6 +40,11 @@ body[theme="white"]{
 body[theme="white"] .section{
   color: var(--black);
 }
+#circleText {
+  position: absolute;
+  white-space: nowrap;
+  transform-origin: center;
+}
 /* .picture{
   display: ;
 } */
