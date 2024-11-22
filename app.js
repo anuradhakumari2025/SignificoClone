@@ -156,6 +156,48 @@ function blueAnimation(){
   });
 }
 
+function updateNavbarColor() {
+  const bodyTheme = document.body.getAttribute("theme");
+  const navbar = document.querySelector("nav");
+
+  const themeColors = {
+    black: { bg: "#000000", text: "#FFFFFF" },
+    cyan: { bg: "#80BECC", text: "#1F2F32" },
+    salmon: { bg: "#EF9D71", text: "#532521" },
+    white: { bg: "#FFFFFF", text: "#000000" },
+  };
+
+  const { bg, text } = themeColors[bodyTheme] || { bg: "gray", text: "white" };
+
+  navbar.style.backgroundColor = bg; // Solid background
+  navbar.style.color = text; // Text color
+
+  navbar.querySelectorAll("a").forEach((link) => {
+    link.style.color = text;
+  });
+}
+
+// Ensure this is called whenever the theme changes
+function bodyColorChange() {
+  document.querySelectorAll(".section").forEach((el) => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 50%",
+      end: "bottom 50%",
+      onEnter: () => {
+        document.body.setAttribute("theme", el.dataset.color);
+        updateNavbarColor(); // Update navbar color
+      },
+      onEnterBack: () => {
+        document.body.setAttribute("theme", el.dataset.color);
+        updateNavbarColor(); // Update navbar color
+      },
+    });
+  });
+}
+
+
+
 
 homePageAnimation();
 realPageAnimation();
