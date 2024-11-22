@@ -68,7 +68,10 @@ nav a {
   color: inherit; /* Match the navbar text color */
   transition: color 0.3s ease;
 }
-
+.black-footer h1:hover{
+  color: #fef08a;
+  cursor: pointer;
+}
 
 /* .picture{
   display: ;
